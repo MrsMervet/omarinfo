@@ -309,3 +309,13 @@ footer b,footer span{display:block}footer span{opacity:.65;font-size:12px}footer
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;scroll-behavior:auto!important;transition:none!important}
 }
+
+.key-negative{
+  color:#d9385f;
+  background:#fff0f4;
+  border:1px solid #ffc6d4;
+  padding:1px 7px;
+  border-radius:8px;
+  font-weight:900;
+  box-shadow:0 2px 0 rgba(217,56,95,.08);
+}

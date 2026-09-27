@@ -59,19 +59,19 @@
   const tf = [
     {q:"كان عمر أصغر من الرسول ﷺ بثلاث عشرة سنة.", answer:true, info:"نعم، ورد في الدرس أنه كان أصغر منه بثلاث عشرة سنة."},
     {q:"كان منزل عمر في الجاهلية عند أصل الجبل الذي يسمى اليوم جبل عمر.", answer:true, info:"هذه العبارة صحيحة."},
-    {q:"كان عمر لا يعرف القراءة.", answer:false, info:"خطأ؛ امتاز عمر بتعلّم القراءة."},
+    {q:"كان عمر لا يعرف القراءة.", html:"كان عمر <span class=\"key-negative\">لا يعرف</span> القراءة.", answer:false, info:"خطأ؛ امتاز عمر بتعلّم القراءة."},
     {q:"استمر القتال في القادسية أربعة أيام.", answer:true, info:"صحيح؛ استمر القتال أربعة أيام."},
     {q:"ذهب عمر إلى القدس وعقد الصلح مع أهلها وأعطاهم الأمان.", answer:true, info:"هذه العبارة صحيحة."},
-    {q:"استشهد عمر سنة 24 هـ.", answer:false, info:"خطأ؛ استشهد سنة 23 هـ."}
+    {q:"استشهد عمر سنة ٤٢ هـ.", answer:false, info:"خطأ؛ استشهد سنة 23 هـ."}
   ];
 
   const dragItems = [
     {id:"kunya", label:"أبو حفص", target:"كنيته"},
     {id:"title", label:"الفاروق", target:"لقبه"},
-    {id:"islam", label:"دار الأرقم", target:"أعلن إسلامه"},
+    {id:"islam", label:"دار الأرقم", target:"أعلن عمر إسلامه في"},
     {id:"qadisiyah", label:"سعد بن أبي وقاص", target:"قائد المسلمين في القادسية"},
-    {id:"egypt", label:"عمرو بن العاص", target:"توجّه إلى مصر"},
-    {id:"death", label:"23 هـ", target:"سنة استشهاده"}
+    {id:"egypt", label:"عمرو بن العاص", target:"القائد الذي توجّه إلى مصر"},
+    {id:"death", label:"23 هـ", target:"استشهد عمر رضي الله عنه سنة"}
   ];
 
   let score = 0;
@@ -123,7 +123,7 @@
 
       const q=document.createElement("div");
       q.className="quiz-q";
-      q.textContent=`${idx+1}. ${item.q}`;
+      q.innerHTML=`${idx+1}. ${item.html || item.q}`;
       card.appendChild(q);
 
       const options=document.createElement("div");
@@ -172,7 +172,7 @@
 
       const q=document.createElement("div");
       q.className="quiz-q";
-      q.textContent=`${idx+1}. ${item.q}`;
+      q.innerHTML=`${idx+1}. ${item.html || item.q}`;
       card.appendChild(q);
 
       const options=document.createElement("div");
