@@ -311,11 +311,19 @@ footer b,footer span{display:block}footer span{opacity:.65;font-size:12px}footer
 }
 
 .key-negative{
-  color:#d9385f;
-  background:#fff0f4;
-  border:1px solid #ffc6d4;
-  padding:1px 7px;
-  border-radius:8px;
-  font-weight:900;
-  box-shadow:0 2px 0 rgba(217,56,95,.08);
+  display:inline-block;
+  color:#e40046 !important;
+  background:#fff0f5;
+  border:2px solid #ff9fbd;
+  padding:1px 8px 2px;
+  margin:0 2px;
+  border-radius:10px;
+  font-weight:900 !important;
+  font-size:1.08em;
+  line-height:1.25;
+  text-decoration:underline;
+  text-decoration-color:#ff4f82;
+  text-decoration-thickness:3px;
+  text-underline-offset:3px;
+  box-shadow:0 3px 0 rgba(228,0,70,.10), 0 0 0 3px rgba(255,159,189,.08);
 }
